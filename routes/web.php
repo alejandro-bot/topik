@@ -36,3 +36,5 @@ Route::post('subirformularios', [HomeController::class, 'subirFormularios']);
 Route::post('subircomprobante', [HomeController::class, 'subirComprobante']);
 
 Route::get('admin/home', [AdminController::class, 'home']);
+
+Route::get('admin/ver-usuarios/{id}', [AdminController::class, 'show']);
