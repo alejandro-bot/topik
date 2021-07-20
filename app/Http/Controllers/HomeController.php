@@ -63,7 +63,9 @@ class HomeController extends Controller
             $user = User::find(Auth::user()->id);
             $user->servicios_especiales = $request->file('servicios_especiales')->store('public');
             $user->formato_registro = $request->file('formato_registro')->store('public');
+            
             $user->save();
+
 
             return redirect()->route('home');
         
