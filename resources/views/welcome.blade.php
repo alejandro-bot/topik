@@ -46,6 +46,11 @@
                     </a>
                 </div>
             </div><br>
+            
+            @php
+                $users = App\User::all()->count();
+            @endphp
+            @if ($users < 41)
             <div class="col-xs-12">
                 <h2 style="text-align: center; font-size: 20px;">
                     Si no esta inscrito
@@ -58,6 +63,21 @@
                     </a>
                 </div>
             </div>
+            @else
+            <div class="col-xs-12">
+                <h2 style="text-align: center; font-size: 20px;">
+                    En este momento no hay mas cupos para incripciones
+                </h2>
+            </div>
+            <div class="col-xs-12 mt-3">
+                <div class="justify-content-center text-center">
+                    <a href="" class="text-center">
+                        <button class="btn btn-warning" style="color: white; width:28%; height:50px" disabled>Registrar</button>
+                    </a>
+                </div>
+            </div>
+            @endif
+            
         </div>
     </div>
 </div>

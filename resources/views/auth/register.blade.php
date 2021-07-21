@@ -117,11 +117,11 @@
                                 <label for="" class=" mt-2" style="text-align: initial;">성별 Género</label>
                                 <div class="col-6">
                                     <div class="form-check form-switch text-left mt-4">
-                                        <input class="form-check-input" name="gender" value="gender-male" type="checkbox" id="flexSwitchCheckChecked">
+                                        <input class="form-check-input" name="gender" value="Masculino" type="checkbox" id="flexSwitchCheckChecked">
                                         <label class="form-check-label" for="flexSwitchCheckChecked">남자 Masculino</label>
                                     </div>
                                    <div class="form-check form-switch text-left">
-                                        <input class="form-check-input" name="gender" value="gender-feminine" type="checkbox" id="flexSwitchCheckDefault">
+                                        <input class="form-check-input" name="gender" value="Femenino" type="checkbox" id="flexSwitchCheckDefault">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">여자 Femenino</label>
                                     </div>
                                 </div>
@@ -138,9 +138,9 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group row mt-1">
-                                        <label for="" style="text-align: initial;">Idioma materno</label>
-                                        <input id="nationality" type="text" class="form-control @error('nationality') is-invalid @enderror" name="idioma_materno" value="{{ old('nationality') }}" required autocomplete="nationality" autofocus >
-                                        @error('nationality')
+                                        <label for="idioma_materno" style="text-align: initial;">Idioma materno</label>
+                                        <input id="idioma_materno" type="text" class="form-control @error('idioma_materno') is-invalid @enderror" name="idioma_materno" value="{{ old('idioma_materno') }}" required autocomplete="idioma_materno" autofocus >
+                                        @error('idioma_materno')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -174,7 +174,7 @@
                                             <option value="pagina web de topik">Página web de topik</option>
                                             <option value="periodico">Periódico</option>
                                             <option value="revista">Revista</option>
-                                            <option value="colegio_o_Universidad">Colegio o Universidad</option>
+                                            <option value="colegio o universidad">Colegio o Universidad</option>
                                             <option value="pancarta">Pancarta</option>
                                             <option value="familia">Familia</option>
                                             <option value="amigos">Amigos</option>
@@ -187,13 +187,13 @@
                                     <div class="form-group row p-3">
                                       <label for="" style="text-align: initial;">응시목적 Propósito</label>
                                         <select class="form-select form-select-lg mb-3" name="purpose" aria-label=".form-select-lg example">
-                                            <option selected value="estudio_o_exterior">Estudio o Exterior</option>
+                                            <option selected value="estudio o exterior">Estudio o Exterior</option>
                                             <option value="trabajo">Trabajo</option>
                                             <option value="obtener credito de universidad">Obtener crédito de universidad</option>
                                             <option value="programacion de sociedad">Programación de sociedad</option>
                                             <option value="investigación académica">Investigación académica</option>
-                                            <option value="prueba_de_dominio_de_idioma">Prueba de dominio de idioma</option>
-                                            <option value="intereses_culturales">Intereses culturales</option>
+                                            <option value="prueba de dominio de idioma">Prueba de dominio de idioma</option>
+                                            <option value="intereses culturales">Intereses culturales</option>
                                             <option value="otros">otros</option>
                                             <option value="visa">Visa</option>
                                         </select>
@@ -244,7 +244,7 @@
                                 <div class="col-4">
                                     <div class="form-group row p-3">
                                       <label for="" style="text-align: initial;">¿Tiene alguna discapacidad?</label>
-                                        <select class="form-select form-select-lg mb-3" name="purpose" aria-label=".form-select-lg example">
+                                        <select class="form-select form-select-lg mb-3" name="discapacidad" aria-label=".form-select-lg example">
                                             <option selected value="no">No</option>
                                             <option value="si">Si</option>
                                         </select>

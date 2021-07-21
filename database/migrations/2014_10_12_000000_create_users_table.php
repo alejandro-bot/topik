@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('age');
             $table->string('gender')->default(1);
             $table->integer('codigo_postal')->nullable();
-            $table->integer('direccion')->nullable();
+            $table->string('direccion')->nullable();
             $table->string('nationality');
             $table->string('idioma_materno');
             $table->string('occupation');
