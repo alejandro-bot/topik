@@ -117,18 +117,29 @@
                                 <label for="" class=" mt-2" style="text-align: initial;">성별 Género</label>
                                 <div class="col-6">
                                     <div class="form-check form-switch text-left mt-4">
-                                        <input class="form-check-input" name="gender" value="gender-male" type="checkbox" id="flexSwitchCheckChecked">
+                                        <input class="form-check-input" name="gender" value="masculino" type="checkbox" id="flexSwitchCheckChecked">
                                         <label class="form-check-label" for="flexSwitchCheckChecked">남자 Masculino</label>
                                     </div>
                                    <div class="form-check form-switch text-left">
-                                        <input class="form-check-input" name="gender" value="gender-feminine" type="checkbox" id="flexSwitchCheckDefault">
+                                        <input class="form-check-input" name="gender" value="femenino" type="checkbox" id="flexSwitchCheckDefault">
                                         <label class="form-check-label" for="flexSwitchCheckDefault">여자 Femenino</label>
                                     </div>
                                 </div>
-                                <div class="col-6">
+                                <div class="col-3">
                                     <div class="form-group row mt-1">
                                         <label for="" style="text-align: initial;">국적 Nacionalidad</label>
                                         <input id="nationality" type="text" class="form-control @error('nationality') is-invalid @enderror" name="nationality" value="{{ old('nationality') }}" required autocomplete="nationality" autofocus >
+                                        @error('nationality')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group row mt-1">
+                                        <label for="" style="text-align: initial;">Idioma materno</label>
+                                        <input id="nationality" type="text" class="form-control @error('nationality') is-invalid @enderror" name="idioma_materno" value="{{ old('nationality') }}" required autocomplete="nationality" autofocus >
                                         @error('nationality')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -157,9 +168,10 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group row p-3">
-                                      <label for="" style="text-align: initial;">응시동기 Motivo</label>
+                                      <label for="" style="text-align: initial;">응시동기 ¿Como se enteró del examen del topik?</label>
                                         <select class="form-select form-select-lg mb-3" name="reason" aria-label=".form-select-lg example">
                                             <option selected value="medio_de_comunicacion">Medio de comunicación</option>
+                                            <option value="pagina web de topik">Página web de topik</option>
                                             <option value="periodico">Periódico</option>
                                             <option value="revista">Revista</option>
                                             <option value="colegio_o_Universidad">Colegio o Universidad</option>
@@ -177,7 +189,8 @@
                                         <select class="form-select form-select-lg mb-3" name="purpose" aria-label=".form-select-lg example">
                                             <option selected value="estudio_o_exterior">Estudio o Exterior</option>
                                             <option value="trabajo">Trabajo</option>
-                                            <option value="turismo">Turismo</option>
+                                            <option value="obtener credito de universidad">Obtener crédito de universidad</option>
+                                            <option value="programacion de sociedad">Programación de sociedad</option>
                                             <option value="investigación académica">Investigación académica</option>
                                             <option value="prueba_de_dominio_de_idioma">Prueba de dominio de idioma</option>
                                             <option value="intereses_culturales">Intereses culturales</option>
@@ -190,7 +203,24 @@
                         </div>
                         <div class="container">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-3">
+                                    <div class="form-group row p-3">
+                                        <label for="" style="text-align: initial;">Código postal</label>
+                                        <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="codigo_postal" value="{{ old('phone') }}" required autocomplete="phone" autofocus >
+                                        @error('phone')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group row p-3 mt-0">
+                                        <label for="" style="text-align: initial;">Dirección</label>
+                                        <input type="text" class="form-control" name="direccion" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                                <div class="col-3">
                                     <div class="form-group row p-3">
                                         <label for="" style="text-align: initial;">핸드폰 Contacto telefónico</label>
                                         <input id="phone" type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus >
@@ -201,10 +231,23 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-3">
                                     <div class="form-group row p-3 mt-0">
                                         <label for="" style="text-align: initial;">도시 Ciudad</label>
                                         <input type="text" class="form-control" name="city" id="exampleFormControlInput1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="form-group row p-3">
+                                      <label for="" style="text-align: initial;">¿Tiene alguna discapacidad?</label>
+                                        <select class="form-select form-select-lg mb-3" name="purpose" aria-label=".form-select-lg example">
+                                            <option selected value="no">No</option>
+                                            <option value="si">Si</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

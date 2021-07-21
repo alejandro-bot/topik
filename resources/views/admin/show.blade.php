@@ -10,8 +10,7 @@
                 <div class="card card-widget widget-user">
                     <!-- Add the bg color to the header using any of the bg-* classes -->
                     <div class="widget-user-header bg-info">
-                        <h3 class="widget-user-username">Alexander Pierce</h3>
-                        <h5 class="widget-user-desc">Founder &amp; CEO</h5>
+                        <h3 class="widget-user-username">{{ $user->name_english }}</h3>
                     </div>
                     <div class="widget-user-image">
                         <img class="img-circle elevation-2" src="../dist/img/user1-128x128.jpg" alt="User Avatar">
@@ -20,44 +19,45 @@
                         <div class="row">
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">3,200</h5>
-                                    <span class="description-text">SALES</span>
+                                    <h5 class="description-header">Nombre en koreano</h5>
+                                    <span class="description-text">{{ $user->name_korean }}</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">13,000</h5>
-                                    <span class="description-text">FOLLOWERS</span>
+                                    <h5 class="description-header">Correo</h5>
+                                    <span class="description-text">{{ $user->email }}</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4">
                                 <div class="description-block">
-                                    <h5 class="description-header">35</h5>
-                                    <span class="description-text">PRODUCTS</span>
+                                    <h5 class="description-header">Fecha de nacimiento</h5>
+                                    @php
+                                        $fecha = Carbon\Carbon::parse($user->age);
+                                    @endphp
+                                    <span class="description-text">{{ $fecha->format('Y-m-d') }}</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
-                            
-                            
-                            <!-- /.col -->
+                        <!-- /.col -->
                         </div>
                         <div class="row">
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">3,200</h5>
-                                    <span class="description-text">SALES</span>
+                                    <h5 class="description-header">Genero</h5>
+                                    <span class="description-text">{{ $user->gender }}</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
                             <!-- /.col -->
                             <div class="col-sm-4 border-right">
                                 <div class="description-block">
-                                    <h5 class="description-header">13,000</h5>
-                                    <span class="description-text">FOLLOWERS</span>
+                                    <h5 class="description-header">Codigo postal</h5>
+                                    <span class="description-text">{{ $user->codigo_postal }}</span>
                                 </div>
                                 <!-- /.description-block -->
                             </div>
